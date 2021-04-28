@@ -26,6 +26,7 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 INSTALLED_APPS = [
     'home',
     'search',
+    'users',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -90,8 +91,12 @@ WSGI_APPLICATION = 'PRO_DENTICARE.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'pro_denticare_db',
+        'USER': 'rocksongabriel',
+        'PASSWORD': 'iamthedarkbotBORNin1999',
+        'HOST': 'localhost',
+        'PORT': 5432
     }
 }
 
@@ -160,3 +165,5 @@ WAGTAIL_SITE_NAME = "PRO_DENTICARE"
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://example.com'
+
+AUTH_USER_MODEL = 'users.User'
