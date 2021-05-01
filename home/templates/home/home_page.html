@@ -43,43 +43,21 @@
             <div class="hr"></div>
             <div class="row mt-4">
                 <div class="row mt-4" >
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="service-box">
-                            <h3>Title of Service</h3>
-                           
-                            <p>Neque debitis sunt sapiente, ratione minima sit accusamus cumque laudantium blanditiis, placeat velit quia quisquam ut ipsa atque cum ea eaque quibusdam, quis fuga cum quod perferendis quidem aut possimus.
-                            </p><a href="#">read more</a>
+                    {% for service in services %}
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="service-box">
+                                <h3>{{ service.name }}</h3>
+                                <p>{{ service.description|richtext|truncatewords:25 }}</p><a href="{{ service.url }}">read more</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="service-box">
-                            <h3>Title of Service</h3>
-                           
-                            <p>Neque debitis sunt sapiente, ratione minima sit accusamus cumque laudantium blanditiis, placeat velit quia quisquam ut ipsa atque cum ea eaque quibusdam, quis fuga cum quod perferendis quidem aut possimus.</p>
-                            <a href="#">read more</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="service-box">
-                            <h3>Title of Service</h3>
-                           
-                            <p>Neque debitis sunt sapiente, ratione minima sit accusamus cumque laudantium blanditiis, placeat velit quia quisquam ut ipsa atque cum ea eaque quibusdam, quis fuga cum quod perferendis quidem aut possimus.</p>
-                            <a href="#">read more</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="service-box">
-                            <h3>Title of Service</h3>
-                           
-                            <p>Neque debitis sunt sapiente, ratione minima sit accusamus cumque laudantium blanditiis, placeat velit quia quisquam ut ipsa atque cum ea eaque quibusdam, quis fuga cum quod perferendis quidem aut possimus.</p>
-                            <a href="#">read more</a>
-                        </div>
-                    </div>
+                    {% empty %}
+                        <h1 class="text-danger">Sorry, no sevices added yet</h1>
+                    {% endfor %}
                     
                 </div>
             </div>
 
-            <a href="#" class="text-center btn btn-primary">Show more Services</a>
+            <a href="/services/" class="text-center btn btn-primary mt-3">Show more Services</a>
         </div>
 
 

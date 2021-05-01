@@ -3,6 +3,7 @@ from wagtail.admin.edit_handlers import (FieldPanel, MultiFieldPanel,
                                          PageChooserPanel)
 from wagtail.core.models import Page
 from wagtail.images.edit_handlers import ImageChooserPanel
+from services.models import ServicePage
 
 
 class HomePage(Page):
@@ -51,6 +52,13 @@ class HomePage(Page):
         null=True,
         on_delete=models.SET_NULL,
     )
+
+    
+    def get_context(self, request, *args, **kwargs):
+        context = super().get_context(request, *args, **kwargs)
+        context['services'] = ServicePage.objects.all().live()[:6]
+        print(context['services'])
+        return context
     
     content_panels = Page.content_panels + [
         MultiFieldPanel([
@@ -66,4 +74,3 @@ class HomePage(Page):
             ImageChooserPanel("about_us_image"),
         ], heading="About Us Section Information"),
     ]
-
