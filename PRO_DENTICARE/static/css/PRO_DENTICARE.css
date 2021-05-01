@@ -158,7 +158,8 @@ body, html{
 
 /* SERVICES PAGE */
 .services-title {
-    background-color: wheat;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
     height: 150px;
     line-height: 150px;
     font-weight: 900;
