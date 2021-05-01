@@ -54,10 +54,70 @@
         </div>
     </div>
 
-    <!-- About Us -->
-    
+    <div class="container">
+
+        <!-- About Us -->
+        <div class="about_section">
+            <h1 class="section_title">About Us</h1>
+            <div class="hr"></div>
+            <div class="row mt-4" >
+                <div class="col-md-4 col-12">
+                    {% image self.about_us_image original as img %}
+                    <img src="{{ img.url }}" class="img-fluid about-us-img">
+                </div>
+                <div class="col-md-8 col-12">
+                    <p class="about-us-text">{{ self.about_us_text }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services We Offer -->
+        <div class="services_section">
+            <h1 class="section_title">Services We Offer</h1>
+            <div class="hr"></div>
+            <div class="row mt-4">
+                <div class="row mt-4" >
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="service-box">
+                            <h3>Title of Service</h3>
+                           
+                            <p>Neque debitis sunt sapiente, ratione minima sit accusamus cumque laudantium blanditiis, placeat velit quia quisquam ut ipsa atque cum ea eaque quibusdam, quis fuga cum quod perferendis quidem aut possimus.
+                            </p><a href="#">read more</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="service-box">
+                            <h3>Title of Service</h3>
+                           
+                            <p>Neque debitis sunt sapiente, ratione minima sit accusamus cumque laudantium blanditiis, placeat velit quia quisquam ut ipsa atque cum ea eaque quibusdam, quis fuga cum quod perferendis quidem aut possimus.</p>
+                            <a href="#">read more</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="service-box">
+                            <h3>Title of Service</h3>
+                           
+                            <p>Neque debitis sunt sapiente, ratione minima sit accusamus cumque laudantium blanditiis, placeat velit quia quisquam ut ipsa atque cum ea eaque quibusdam, quis fuga cum quod perferendis quidem aut possimus.</p>
+                            <a href="#">read more</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="service-box">
+                            <h3>Title of Service</h3>
+                           
+                            <p>Neque debitis sunt sapiente, ratione minima sit accusamus cumque laudantium blanditiis, placeat velit quia quisquam ut ipsa atque cum ea eaque quibusdam, quis fuga cum quod perferendis quidem aut possimus.</p>
+                            <a href="#">read more</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <a href="#" class="text-center btn btn-primary">Show more Services</a>
+        </div>
 
 
-    <!-- Services We Offer -->
+
+    </div>
 
 {% endblock content %}
