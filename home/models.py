@@ -43,11 +43,34 @@ class HomePage(Page):
         help_text="Select a page that this button leads to"
     )
 
+    about_us_text = models.TextField(
+        help_text="Enter a small description of the company",
+        null=False,
+        blank=False,
+        default=""
+    )
+
+    about_us_image = models.ForeignKey(
+        "wagtailimages.Image",
+        related_name="+",
+        help_text="Select an image to use for the about section on the homepage",
+        blank=False,
+        null=True,
+        on_delete=models.SET_NULL,
+    )
     
     content_panels = Page.content_panels + [
-        ImageChooserPanel("banner_image"),
-        FieldPanel("banner_text"),
-        FieldPanel("banner_button_text"),
-        PageChooserPanel("banner_button_page"),
+        MultiFieldPanel([
+            ImageChooserPanel("banner_image"),
+            FieldPanel("banner_text"),
+        ], heading="Banner Information"),
+        MultiFieldPanel([
+            FieldPanel("banner_button_text"),
+            PageChooserPanel("banner_button_page"),
+        ], heading="Banner Button Information"),
+        MultiFieldPanel([
+            FieldPanel("about_us_text"),
+            ImageChooserPanel("about_us_image"),
+        ], heading="About Us Section Information"),
     ]
 

@@ -46,7 +46,6 @@
 
     <!-- Banner -->
     {% image self.banner_image original as banner_image %}
-   
     <div class="hero-image" style="background-image:  linear-gradient(rgba(0, 0, 0, 0.8),   rgba(0, 0, 0, 0.8)), url({{ banner_image.url }})">
         <div class="hero-text" >
             <h2>{{ self.banner_text }}</h2>
@@ -54,5 +53,11 @@
             <a href="{{ self.banner_button_page.url }}" class="cta_btn btn btn-danger btn-lg">{{ self.banner_button_text }}</a>
         </div>
     </div>
+
+    <!-- About Us -->
+    
+
+
+    <!-- Services We Offer -->
 
 {% endblock content %}
