@@ -7,13 +7,6 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 
 class HomePage(Page):
     """Page model for the homepage"""
-    # todo 
-    # 1. add banner
-    # 2. add text on banner
-    # 3. a button to an action page on banner
-    # 4. list of services
-    # 5. testimonials - slider
-    # 6. small about on homepage
     max_count = 1
 
     banner_image = models.ForeignKey(

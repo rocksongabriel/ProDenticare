@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static wagtailcore_tags wagtailimages_tags %}
+
+
+{% block content %}
+
+    <!-- Banner -->
+    {% image self.featured_image original as service_img%}
+    <div class="service-banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0.5)), url({{ service_img.url }})">
+        <div class="service-text">
+            <h2>{{ self.title }}<h2>
+        </div>
+    </div>
+    <div class="container service-description-box">
+        <p class="service-description">{{ self.description|richtext }}</p>
+    </div>
+
+{% endblock content %}
