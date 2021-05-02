@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'search',
     'users',
     'services',
+    'dentist',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
