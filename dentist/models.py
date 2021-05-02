@@ -2,6 +2,7 @@ from django.db import models
 from wagtail.admin.edit_handlers import (FieldPanel, MultiFieldPanel,
                                          StreamFieldPanel)
 from wagtail.core.fields import StreamField
+from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.core.models import Page
 from streams.blocks import TitleAndTextBlock
 
@@ -31,6 +32,7 @@ class DentistPage(Page):
         MultiFieldPanel([
             FieldPanel("name"),
             FieldPanel("small_description"),
+            ImageChooserPanel("picture"),
         ], heading="Intro of About"),
         MultiFieldPanel([
             StreamFieldPanel("about"),
