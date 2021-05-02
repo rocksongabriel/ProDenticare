@@ -1,9 +1,9 @@
 from django.db import models
 from wagtail.admin.edit_handlers import (FieldPanel, MultiFieldPanel,
                                          StreamFieldPanel)
-from wagtail.core import blocks
 from wagtail.core.fields import StreamField
 from wagtail.core.models import Page
+from streams.blocks import TitleAndTextBlock
 
 
 class DentistPage(Page):
@@ -16,8 +16,7 @@ class DentistPage(Page):
         help_text="Enter a small description about the dentist"
     )
     about = StreamField([
-        ("title", blocks.CharBlock(help_text="Enter the title of this section of the about")),
-        ("text", blocks.RichTextBlock(help_text="Enter the description of this section")),
+       ("title_and_text", TitleAndTextBlock()),
     ])
 
     content_panels = Page.content_panels + [
