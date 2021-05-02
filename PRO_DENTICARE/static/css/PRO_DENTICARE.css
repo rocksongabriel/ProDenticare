@@ -1,3 +1,8 @@
+:root {
+    --red-accent-1: rgba(218, 0, 0, 0.8);
+    --black-accent-1: rgba(0, 0, 0, 0.8);
+}
+
 body, html{
     background-color: whitesmoke;
     height: 100%;
@@ -5,8 +10,26 @@ body, html{
 }
 
 
+/* GENERAL */
+.g-link {
+    text-decoration: none;
+    color: var(--red-accent-1);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.h2-font {
+    font-size: 1.6rem;
+}
+
+.section_title {
+    font-weight: bold;
+    color: var(--black-accent-1);
+}
+
+
 .navbar-nav .nav-item .nav-link {
-    color: rgba(255, 0, 0, 0.8);
+    color: var(--red-accent-1);
     font-size: 1.1rem;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -87,11 +110,7 @@ body, html{
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* SECTION */
-.section_title {
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.9)
-}
+
 
 /* ABOUT SECTION */
 
@@ -145,7 +164,7 @@ body, html{
 .service-box h3 {
     text-align: center;
     font-weight: 600;
-    color: rgba(0, 0, 255, 0.9);
+    color: var(--black-accent-1);
 }
 
 .service-box p {
@@ -207,4 +226,14 @@ body, html{
 .service-description-box {
     padding: 2rem;
     font-size: 1.4rem;
+}
+
+
+
+/* FOOOTER */
+footer {
+    height: 200px;
+    background-color: blue;
+    margin-top: 3rem;
+    padding: 1.2rem;
 }

@@ -8,9 +8,9 @@
     <div class="container">
         {% for service in services %}
             <div class="service">
-                <h2><a class="text-link" href="{{ service.url }}">{{ service.name }}</a></h2>
+                <h2><a class="g-link h2-font" href="{{ service.url }}">{{ service.name }}</a></h2>
                 <p>{{ service.description|richtext|truncatewords:50 }}</p>
-                <a class="btn btn-outline-primary" href="{{ service.url }}">Learn More</a>
+                <a class="btn btn-outline-danger" href="{{ service.url }}">Learn More</a>
             </div>
             <hr />
         {% endfor %}

@@ -47,7 +47,7 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="service-box">
                                 <h3>{{ service.name }}</h3>
-                                <p>{{ service.description|richtext|truncatewords:25 }}</p><a href="{{ service.url }}">read more</a>
+                                <p>{{ service.description|richtext|truncatewords:25 }}</p><a class="g-link" href="{{ service.url }}">read more</a>
                             </div>
                         </div>
                     {% empty %}
