@@ -11,7 +11,15 @@ class DentistPage(Page):
     max_count = 1
     parent_page_types = ["home.HomePage"]
     template = "dentist/dentist_page.html"
+
     name = models.CharField(max_length=50, help_text="Enter name of the dentist")
+    picture = models.ForeignKey(
+        "wagtailimages.Image",
+        related_name="+",
+        null=True,
+        blank=False,
+        on_delete=models.SET_NULL,
+    )
     small_description = models.TextField(
         help_text="Enter a small description about the dentist"
     )
