@@ -232,8 +232,47 @@ body, html{
 
 /* FOOOTER */
 footer {
-    height: 200px;
-    background-color: blue;
     margin-top: 3rem;
-    padding: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+footer h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.footer-list {
+    list-style: none;
+}
+
+.footer-list li {
+    padding: 0.4rem;
+    font-size: 1.1rem;
+}
+
+.footer-list li a {
+    font-size: 1.3rem;
+}
+
+.footer-box-1, .footer-box-2 {
+    padding: 1.5rem;
+}
+
+.footer-box-2 h2 {
+    color: white;
+}
+
+.footer-box-3 {
+    height: 80px;
+    color: white;
+    font-size: 1.3rem;
+    background-color: black;
+    line-height: 80px;
+}
+
+.footer-hr {
+    height: 3px;
+    background-color: white;
+    width: 50%;
+    display: inline-block;
 }
